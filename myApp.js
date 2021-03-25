@@ -6,7 +6,7 @@ var app = express();
 });*/
 absoluteIndexPath = __dirname + '/views/index.html';
 
-app.use(__dirname + '/public',express.static('/public'));
+app.use('/public',express.static(path.join(__dirname, 'public')));
 
 app.get('/', (req, res) => {
     res.sendFile(absoluteIndexPath);
