@@ -5,7 +5,7 @@ var app = express();
     res.send('Hello Express');
 });*/
 
-app.use("/public", express.static(__dirname + "/public"));
+app.use("/public", express.static("/public"));
 
 absoluteIndexPath = __dirname + '/views/index.html';
 
