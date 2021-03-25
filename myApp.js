@@ -4,10 +4,13 @@ var app = express();
 /*app.get('/', (req, res) => {
     res.send('Hello Express');
 });*/
-absolutePath = __dirname + '/views/index.html';
+absoluteIndexPath = __dirname + '/views/index.html';
 
 app.get('/', (req, res) => {
     res.sendFile(absolutePath);
 });
+
+
+app.use(express.static('/public'));
 
  module.exports = app;
