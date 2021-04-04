@@ -11,6 +11,6 @@ app.get('/', (req, res) => {
 });
 
 
-app.use(express.static('/public'));
+app.use(express.static('public'));
 
- module.exports = app;
+module.exports = app;
