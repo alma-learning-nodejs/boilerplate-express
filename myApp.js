@@ -10,7 +10,7 @@ function logger(req, res, next) {
     next();
 }
 
-app.use(logger);
+app.use('/', logger);
 
 app.use("/public", express.static(__dirname + "/public"));
 
