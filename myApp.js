@@ -5,6 +5,13 @@ var app = express();
     res.send('Hello Express');
 });*/
 
+function logger(req, res, next) {
+    console.log("%s %s - %s", req.method, req.path, req.ip);
+    next();
+}
+
+app.use(logger);
+
 app.use("/public", express.static(__dirname + "/public"));
 
 absoluteIndexPath = __dirname + '/views/index.html';
