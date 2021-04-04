@@ -10,11 +10,13 @@ function logger(req, res, next) {
     next();
 }
 
-app.use('/', logger);
+
 
 app.use("/public", express.static(__dirname + "/public"));
 
 absoluteIndexPath = __dirname + '/views/index.html';
+
+app.use('/', logger);
 
 app.get('/', (req, res) => {
     res.sendFile(absoluteIndexPath);
