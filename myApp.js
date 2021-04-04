@@ -15,6 +15,10 @@ app.get('/', (req, res) => {
     res.sendFile(absoluteIndexPath);
 });
 
+app.get("/json", (req, res) => {
+    res.json({"message": "Hello json"});
+});
+
 
 //app.use(express.static('public'));
 
