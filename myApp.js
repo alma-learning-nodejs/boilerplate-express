@@ -20,7 +20,7 @@ app.get("/json", (req, res) => {
     } else {
       message = "Hello json";
     }
-    res.json(message);
+    res.json({"message": message});
 });
 
 module.exports = app;
